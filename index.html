@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/remixicon/4.6.0/remixicon.min.css">
+  <title>Generardor de contraseñas</title>
+</head>
+<body>
+  <main class="container">
+    <h1>Generador de Contraseñas</h1>
+    <div class="opciones">
+      <div class="opciones__rango">
+        <div class="rango__label">
+          <label for="longitud">Longitud:</label>
+          <span id="longitudValue">10</span>
+        </div>
+        <input type="range" id="longitud" min="4" max="30" value="10">
+      </div>
+      <div class="opciones__inputs">
+        <div class="inputs_inputs-box">
+          <input type="checkbox" id="mayusculas" checked>
+          <label for="mayusculas" class="input-checkbox">Mayusculas <span>(A-Z)</span></label>
+        </div>
+        <div class="inputs_inputs-box">
+          <input type="checkbox" id="minusculas" checked>
+          <label for="minusculas" class="input-checkbox">Minusculas <span>(a-z)</span></label>
+        </div>
+        <div class="inputs_inputs-box">
+          <input type="checkbox" id="numeros" checked>
+          <label for="numeros" class="input-checkbox">Numeros <span>(0-9)</span></label>
+        </div>
+        <div class="inputs_inputs-box">
+          <input type="checkbox" id="simbolos" checked>
+          <label for="simbolos" class="input-checkbox">Simbolos <span>(!@#$%^&*()_+[]{}|;:,.>?)</span></label>
+        </div>
+      </div>
+    </div>
+    <div class="password-box">
+      <input type="text" id="password" class="input-text" readonly>
+      <button class="btn-copiar" id="copiarBtn"><i class="ri-clipboard-fill"></i>Copiar</button>
+    </div>
+    <button class="btn-generar" id="generarBtn"><i class="ri-lock-password-fill"></i>Generar</button>
+
+  </main>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/clipboard.js/2.0.11/clipboard.min.js"></script>
+  <script src="index.js"></script>
+  
+</body>
+</html>
