@@ -21,9 +21,218 @@
 }
 h1, label {
   color: var(--black);
-  
 }
 
 /*Body*/
+body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: hsla(210, 80%, 85%, 1); /* Azul claro de fondo */
+  background-image:
+    radial-gradient(at 10% 30%, hsla(220, 90%, 75%, 1) 0px, transparent 50%), /* Azul intermedio */
+    radial-gradient(at 30% 70%, hsla(190, 80%, 70%, 1) 0px, transparent 50%), /* Verde azulado */
+    radial-gradient(at 70% 20%, hsla(160, 70%, 65%, 1) 0px, transparent 50%), /* Verde */
+    radial-gradient(at 90% 60%, hsla(340, 80%, 78%, 1) 0px, transparent 50%), /* Rosa */
+    radial-gradient(at 50% 50%, hsla(300, 70%, 75%, 1) 0px, transparent 50%), /* Morado */
+    radial-gradient(at 20% 80%, hsla(260, 70%, 70%, 1) 0px, transparent 50%); /* Lila */  
+  width: 100%;
+  height: 100vh;
+}
 
 /* container*/
+.container {
+  width: 600px;
+  height: 400px;
+  background-color: rgba(255, 255, 255, 0.25);
+  backdrop-filter: blur(4px);
+  border-radius: 10px;
+  padding: 20px;
+  text-align: center;
+  box-shadow: 0 8px 16px rgba(20, 20, 20, 0.418); /* Sombra */
+}
+
+h1 {
+  font-size: 2em;
+  margin-bottom: 20px;
+}
+
+.opciones {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.opciones__rango {
+  display: flex;
+  flex-direction: column;
+  width: 95%;
+  gap: 10px;
+}
+
+.rango__label {
+  display: flex;
+  justify-content: space-between;
+}
+
+.rango__label label {
+  font-weight: 600;
+}
+
+.rango__label label,
+.rango__label span {
+  font-size: 1.5em;
+
+}
+
+#longitud {
+  -webkit-appearance: none;
+  appearance: none;
+  width: 100%;
+  background-color: var(--white);
+  border-radius: 20px;
+  height: 8px; /* Altura de la pista */
+  outline: none; /* Elimina el contorno azul al enfocar */
+}
+
+#longitud::-webkit-slider-thumb {
+  -webkit-appearance: none;
+  appearance: none;
+  background-color: var(--purple);
+  width: 15px;
+  height: 15px;
+  border-radius: 50%;
+  cursor: pointer;
+  border: 3px solid var(--violet);
+  margin-top: -4px; /* Centra el cursor verticalmente */
+}
+
+#longitud::-webkit-slider-runnable-track {
+  -webkit-appearance: none;
+  appearance: none;
+  background: linear-gradient(to left, var(--violet) 0%, var(--white) 100%);
+  border-radius: 20px;
+  height: 8px; /* Altura de la pista */
+}
+
+.opciones__inputs {
+  padding: 0 20px;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 10px;
+  margin-bottom: 20px;
+}
+
+.inputs_input-box {
+  display: flex;
+  align-items: center;
+}
+
+.inputs_inputs-box input[type="checkbox"] {
+  display: none;
+}
+
+.input-checkbox {
+  display: inline-block;
+  position: relative;
+  padding-left: 25px;
+  cursor: pointer;
+}
+
+.input-checkbox span {
+  color: var(--gray);
+  font-size: 0.8em;
+  font-weight: 700;
+}
+
+.input-checkbox::before {
+  content: "";
+  display: inline-flex;
+  width: 15px;
+  height: 15px;
+  border-radius: 3px;
+  background-color: var(--white);
+  border: 2px solid var(--violet);
+  position: absolute;
+  left: 0;
+  top: 50%;
+  transform: translateY(-50%);
+}
+
+input[type="checkbox"]:checked + .input-checkbox::before {
+  background-color: var(--purple);
+  border-color: var(--purple);
+}
+
+.input-checkbox::after {
+  content: "\2713"; /* inserta tick*/
+  font-size: 0.8em;
+  font-weight: bolder;
+  color: var(--white);
+  position: absolute;
+  left: 4px;
+  top: 50%;
+  transform: translateY(-50%) scale(0);
+  transition: transform 0.2s ease-in-out;
+}
+
+input[type="checkbox"]:checked + .input-checkbox::after {
+  transform: translateY(-50%) scale(1); 
+}
+
+.password-box {
+  display: flex;
+  gap: 10px;
+  margin-bottom: 10px;
+  width: 100%;
+}
+
+.input-text {
+  border: none;
+  color: var(--white);
+  border-radius: 5px;
+  outline: none;
+  width: 60%;
+  color: var(--black);
+  font-size: 1em;
+  padding-left: 20px;
+}
+
+button {
+  border: none;
+  cursor: pointer;
+  border-radius: 5px;
+  transition: 0.4s;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 8px;
+  padding: 12px;
+}
+
+.btn-copiar {
+  width: 38%;
+  font-size: 1rem;
+  background-color: var(--violet);
+  color: var(--white);
+}
+
+.btn-copiar:hover {
+  background-color: #b62ff099;
+}
+
+.btn-generar {
+  width: 100%;
+  background-color: var(--purple);
+  color: var(--white);
+  font-size: 1.2em;
+}
+
+.btn-generar:hover {
+  background-color: var(--violet);
+
+}
