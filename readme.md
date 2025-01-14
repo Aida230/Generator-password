@@ -2,9 +2,7 @@
 
 Este proyecto es un generador de contraseñas aleatorias en el cual puedes configurar la longitud de la contraseña y elegir qué tipos de caracteres deseas incluir, como mayúsculas, minúsculas, números y símbolos. Además, incluye la funcionalidad para copiar la contraseña al portapapeles con un solo clic.
 
-<video controls src="./image/video generardor de contraseñas.mp4" title="Title"></video>
-
-
+![example](./image/contraseña.png)
 
 ## Funcionalidades
 
